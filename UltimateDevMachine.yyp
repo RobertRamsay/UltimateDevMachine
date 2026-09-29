@@ -11,7 +11,9 @@
   "defaultScriptType":1,
   "Folders":[],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"foundation.json","CopyToMask":-1,"filePath":"datafiles","name":"foundation.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -20,6 +22,8 @@
   "name":"UltimateDevMachine",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ue_foundation","path":"scripts/ue_foundation/ue_foundation.yy",},},
+    {"id":{"name":"obj_foundation","path":"objects/obj_foundation/obj_foundation.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

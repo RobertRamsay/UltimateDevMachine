@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ue_foundation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ue_foundation",
+  "parent":{
+    "name":"UltimateDevMachine",
+    "path":"UltimateDevMachine.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

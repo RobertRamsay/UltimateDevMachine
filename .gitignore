@@ -60,3 +60,7 @@ Temporary Items
 
 # GMRT build directory
 Build
+
+# Generated native/editor builds and local compiler configuration
+build/
+local_settings.json

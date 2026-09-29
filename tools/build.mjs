@@ -1,0 +1,10 @@
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { foundationRecipe, assemble } from './foundation.mjs';
+const root = new URL('../', import.meta.url);
+const recipe = foundationRecipe();
+const result = assemble(recipe);
+for (const dir of ['datafiles', 'build']) mkdirSync(new URL(dir, root), {recursive:true});
+writeFileSync(new URL('datafiles/foundation.json', root), JSON.stringify(recipe));
+writeFileSync(new URL('build/foundation.prg', root), result.bytes);
+writeFileSync(new URL('build/foundation.map.json', root), JSON.stringify(result.labels, null, 2));
+console.log(`Built foundation.prg (${result.bytes.length} bytes); shared GML recipe updated.`);

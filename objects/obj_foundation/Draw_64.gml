@@ -1,0 +1,31 @@
+draw_clear(make_color_rgb(15, 20, 31));
+draw_set_color(make_color_rgb(94, 222, 203));
+draw_text(48, 38, "C64 ULTIMATE ENGINE");
+draw_set_color(c_white);
+draw_text(48, 72, "Milestone 1 / Runtime Foundation");
+draw_text(48, 120, "BUILD TARGET");
+for (var _i = 0; _i < array_length(profiles); ++_i) {
+    var _y = 160 + _i * 58;
+    draw_set_color(_i == selected ? make_color_rgb(36, 78, 84) : make_color_rgb(28, 35, 49));
+    draw_rectangle(48, _y, 690, _y + 44, false);
+    draw_set_color(c_white);
+    var _suffix = profiles[_i].maximum > 0 ? " / advertised up to " + string(profiles[_i].maximum) + " MHz" : " / baseline diagnostics";
+    draw_text(64, _y + 14, string(_i + 1) + "   " + profiles[_i].title + _suffix);
+}
+draw_set_color(make_color_rgb(94, 222, 203));
+draw_text(760, 120, "NATIVE DIAGNOSTIC");
+draw_set_color(c_white);
+draw_text(760, 164, "Startup and Ultimate interface signature");
+draw_text(760, 206, "Optional REU round trip with page restoration");
+draw_text(760, 248, "No model or 16 MB capacity claim yet");
+draw_text(760, 290, "77 MHz activation awaits verified controls");
+var _speed = requested_mhz == 0 ? "Keep current speed" : string(requested_mhz) + " MHz requested (not applied)";
+draw_text(48, 372, "S   CPU preference: " + _speed);
+draw_text(48, 412, "The diagnostic preserves the machine's current CPU configuration.");
+draw_set_color(make_color_rgb(94, 222, 203));
+draw_text(48, 478, "B   BUILD DIAGNOSTIC PRG + TARGET MANIFEST");
+draw_set_color(c_white);
+draw_text_ext(48, 528, status_text, 24, 1260);
+draw_set_color(make_color_rgb(164, 177, 196));
+draw_text(48, 658, "Load the PRG in VICE or Ultimate. Press R on the C64 to run the dedicated REU test.");
+draw_text(48, 690, "Source and run instructions: docs/milestone-1.md. This is a foundation, not the scene editor.");
